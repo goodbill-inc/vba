@@ -1,0 +1,22 @@
+# Vba::GroupPlanYearVBAResponse
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **data** | [**GroupPlanYear**](GroupPlanYear.md) |  | [optional] |
+| **error** | [**VBAProblemDetails**](VBAProblemDetails.md) |  | [optional] |
+| **debug** | [**Debug**](Debug.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'vba'
+
+instance = Vba::GroupPlanYearVBAResponse.new(
+  data: null,
+  error: null,
+  debug: null
+)
+```
+

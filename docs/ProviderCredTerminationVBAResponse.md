@@ -1,0 +1,22 @@
+# Vba::ProviderCredTerminationVBAResponse
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **data** | [**ProviderCredTermination**](ProviderCredTermination.md) |  | [optional] |
+| **error** | [**VBAProblemDetails**](VBAProblemDetails.md) |  | [optional] |
+| **debug** | [**Debug**](Debug.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'vba'
+
+instance = Vba::ProviderCredTerminationVBAResponse.new(
+  data: null,
+  error: null,
+  debug: null
+)
+```
+

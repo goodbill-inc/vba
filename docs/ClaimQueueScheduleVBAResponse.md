@@ -1,0 +1,22 @@
+# Vba::ClaimQueueScheduleVBAResponse
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **data** | [**ClaimQueueSchedule**](ClaimQueueSchedule.md) |  | [optional] |
+| **error** | [**VBAProblemDetails**](VBAProblemDetails.md) |  | [optional] |
+| **debug** | [**Debug**](Debug.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'vba'
+
+instance = Vba::ClaimQueueScheduleVBAResponse.new(
+  data: null,
+  error: null,
+  debug: null
+)
+```
+

@@ -1,0 +1,22 @@
+# Vba::ProviderCredHyperlinkListVBAResponse
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **data** | [**Array&lt;ProviderCredHyperlink&gt;**](ProviderCredHyperlink.md) |  | [optional] |
+| **error** | [**VBAProblemDetails**](VBAProblemDetails.md) |  | [optional] |
+| **debug** | [**Debug**](Debug.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'vba'
+
+instance = Vba::ProviderCredHyperlinkListVBAResponse.new(
+  data: null,
+  error: null,
+  debug: null
+)
+```
+

@@ -1,0 +1,22 @@
+# Vba::OccupationVBAResponse
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **data** | [**Occupation**](Occupation.md) |  | [optional] |
+| **error** | [**VBAProblemDetails**](VBAProblemDetails.md) |  | [optional] |
+| **debug** | [**Debug**](Debug.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'vba'
+
+instance = Vba::OccupationVBAResponse.new(
+  data: null,
+  error: null,
+  debug: null
+)
+```
+

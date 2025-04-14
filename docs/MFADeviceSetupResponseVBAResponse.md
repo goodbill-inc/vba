@@ -1,0 +1,22 @@
+# Vba::MFADeviceSetupResponseVBAResponse
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **data** | [**MFADeviceSetupResponse**](MFADeviceSetupResponse.md) |  | [optional] |
+| **error** | [**VBAProblemDetails**](VBAProblemDetails.md) |  | [optional] |
+| **debug** | [**Debug**](Debug.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'vba'
+
+instance = Vba::MFADeviceSetupResponseVBAResponse.new(
+  data: null,
+  error: null,
+  debug: null
+)
+```
+

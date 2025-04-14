@@ -1,0 +1,22 @@
+# Vba::CaseHeadTypeVBAResponse
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **data** | [**CaseHeadType**](CaseHeadType.md) |  | [optional] |
+| **error** | [**VBAProblemDetails**](VBAProblemDetails.md) |  | [optional] |
+| **debug** | [**Debug**](Debug.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'vba'
+
+instance = Vba::CaseHeadTypeVBAResponse.new(
+  data: null,
+  error: null,
+  debug: null
+)
+```
+

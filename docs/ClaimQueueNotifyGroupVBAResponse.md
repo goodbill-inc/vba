@@ -1,0 +1,22 @@
+# Vba::ClaimQueueNotifyGroupVBAResponse
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **data** | [**ClaimQueueNotifyGroup**](ClaimQueueNotifyGroup.md) |  | [optional] |
+| **error** | [**VBAProblemDetails**](VBAProblemDetails.md) |  | [optional] |
+| **debug** | [**Debug**](Debug.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'vba'
+
+instance = Vba::ClaimQueueNotifyGroupVBAResponse.new(
+  data: null,
+  error: null,
+  debug: null
+)
+```
+
