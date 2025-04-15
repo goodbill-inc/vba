@@ -129,7 +129,7 @@ module Vba
           @config.logger.debug "HTTP request body param ~BEGIN~\n#{req_body}\n~END~\n"
         end
       end
-
+      puts "Requesting #{url} with req_opts: #{req_opts.inspect}"
       Typhoeus::Request.new(url, req_opts)
     end
 
