@@ -129,8 +129,33 @@ module Vba
           @config.logger.debug "HTTP request body param ~BEGIN~\n#{req_body}\n~END~\n"
         end
       end
-      puts "Requesting #{url} with req_opts: #{req_opts.inspect}"
+      if @config.debugging
+        @config.logger.debug "HTTP request #{http_method.to_s.upcase} #{url} with req_opts: #{redact_request_options(req_opts).inspect}"
+      end
+
       Typhoeus::Request.new(url, req_opts)
+    end
+
+    # Header names whose values are credentials and must never be logged.
+    REDACTED_HEADERS = ['authorization', 'x-api-key', 'proxy-authorization', 'cookie'].freeze
+
+    # Returns a copy of the request options safe to write to a log.
+    #
+    # Credential headers carry the Cognito bearer token, the HTTP basic
+    # username and password, and the VBA API key, so their values are
+    # replaced with a placeholder.
+    #
+    # @param [Hash] req_opts Typhoeus request options
+    # @return [Hash] req_opts with credential header values replaced
+    def redact_request_options(req_opts)
+      headers = req_opts[:headers]
+      return req_opts unless headers.is_a?(Hash)
+
+      redacted = headers.each_with_object({}) do |(name, value), acc|
+        acc[name] = REDACTED_HEADERS.include?(name.to_s.downcase) ? '[REDACTED]' : value
+      end
+
+      req_opts.merge(:headers => redacted)
     end
 
     # Builds the HTTP request body
